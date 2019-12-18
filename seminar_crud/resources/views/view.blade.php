@@ -8,13 +8,13 @@
         <div class="col-sm-3">
             <div class="android">
                 <h1>ANDROID</h1>
-                <a href="#" class="btn btn-primary">More Info</a>
+                <a href="/android" class="btn btn-primary">More Info</a>
             </div>
         </div>
         <div class="col-sm-3">
             <div class="web">
                 <h1>WEB</h1>
-                <a href="#" class="btn btn-primary">More Info</a>
+                <a href="" class="btn btn-primary">More Info</a>
             </div>
         </div>
         <div class="col-sm-3"></div>

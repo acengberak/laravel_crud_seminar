@@ -11,7 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    {{-- BOOTSTRAP --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/d_android.css">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -24,7 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    SEMINAR
+                    <b> SEMINAR</b>
                 </a>
                 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -41,7 +43,7 @@
                             <a class="nav-link" href="#">Peserta Seminar Web</a>
                         </li>
                     </ul>
-
+                    
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -80,7 +82,20 @@
 
         <main class="py-4">
             @yield('content')
+            @yield('android')
+            @yield('web')
         </main>
+        
+        <footer id="footer-app">
+            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+                <div class="footer container">
+                    <a class="navbar-brand mx-auto" href="{{ url('/') }}">
+                        CRUD LARAVEL
+                    </a>
+                </div>
+            </nav>
+        </footer>
     </div>
+   
 </body>
 </html>

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+body {
+    font-family: "Questrial", sans-serif;
+}
+
+footer {
+    background-color: #323232;
+    font-family: "Questrial";
+    padding: 5vmin 14vmin
+}
+
+.logo {
+    padding-top: 5vmin;
+    width: 10em;
+}
+
+.sponsor img {
+    width: 9rem;
+    padding: 11vmin 3vmin;
+}
+
+footer .coloumn i {
+    color: whitesmoke;
+    font-size: 20px;
+    padding: 0 2px;
+}
+
+footer .col-sm-2 .text-muted {
+    padding-top: 11vmin;
+}
+
+
+.text-light {
+    color: #E63373 !important
+}
+
+.batch_2 {
+    background-color: #fade08;
+}
+
+
+/* Landing Page */
+
+.about-section {
+    background: rgb(231, 231, 231);
+}
+
+.carousel-inner img {
+    width: 640px;
+    height: 380px;
+}
+
+.panel-item {
+    background-color: white;
+    padding: 25px 25px 25px 25px;
+    box-shadow: grey;
+    height: 95%;
+}
+
+.card-tittle h3 {
+    font-weight: bold;
+}
+
+.card-title p {
+    line-height: 3px;
+    text-justify: center;
+}
+
+/* Download */
+
+.download {
+    background: url("/img/adit/const_2.jpg");
+    background-size: cover;
+    padding: 22vmin 22vmin;
+    background-repeat: none;
+    background-position-y: -25rem;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.download:hover {
+    filter: grayscale(0);
+    background-position-y: -30rem;
+}
+
+.download h1 {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 3rem;
+    color: black;
+}
+
+.download a {
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.download .btn {
+    background-color: orange;
+    border-radius: 0;
+    padding: 1.5vmin 6vmin;
+    transition: 0.3s;
+}
+
+.download a:hover {
+    color: white;
+}
+
+.download .btn:hover {
+    background-color: transparent;
+    border: 1px solid orange;
+
+}
+
+.ourproject {
+    padding-top: 10vmin;
+    padding-bottom: 10vmin;
+}
+
+.project-tittle h2 {
+    padding: 3vmin;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.project-tittle p {
+    padding-bottom: 3vmin;
+    font-size: 1rem;
+}
+
+.project-image img {
+    height: 95%;
+}
+
+.ourcustomer {
+    padding-bottom: 10vmin;
+}
+
+.customer-tittle h3 {
+    padding: 3vmin;
+    color: rgb(143, 143, 143);
+}
+
+.customer-image {
+    display: flex;
+}
+
+.customer-image img {
+    margin: 1vmin;
+    filter: grayscale(100%);
+    transition: 0.4s;
+
+}
+
+.customer-image img:hover {
+    filter: grayscale(0);
+}
