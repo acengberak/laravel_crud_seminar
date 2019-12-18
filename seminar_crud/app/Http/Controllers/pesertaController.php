@@ -7,5 +7,4 @@ use App\Peserta;
 
 class pesertaController extends Controller
 {
-    //
 }
