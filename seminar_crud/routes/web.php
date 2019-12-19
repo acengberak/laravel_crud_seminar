@@ -19,3 +19,5 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/PesertaAndroid','pesertaController@read');
+Route::get('/PesertaWeb','pesertaController@read_web');
