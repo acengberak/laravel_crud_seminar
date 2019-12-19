@@ -42,12 +42,14 @@ class pesertaController extends Controller
         $android->save();
         return redirect()->back()->with('alert', 'Updated!');
     }
-  public function read(){
-    $data= Peserta::all();
-    return view('read.read_android');
-  }
-  public function read_web(){
-    $data= Peserta::all();
-    return view('read.read_web');
-  }
+    public function read()
+    {
+        $data = Peserta::all();
+        return view('read.read_android');
+    }
+    public function read_web()
+    {
+        $data = Peserta::all();
+        return view('read.read_web');
+    }
 }
