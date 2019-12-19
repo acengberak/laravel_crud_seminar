@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
-@section('android')
+@section('title','Detail Seminar Android')
+@section('content')
 
 <div class="container">
     <div class="tittle py-5">
@@ -73,9 +73,6 @@
                 Seminar</button>
         </div>
     </div>
-
-
-
 
     {{-- MODAL --}}
     <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

@@ -7,7 +7,7 @@
       <!-- CSRF Token -->
       <meta name="csrf-token" content="{{ csrf_token() }}">
 
-      <title>Seminar</title>
+      <title>@yield('title')</title>
 
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
@@ -18,7 +18,7 @@
       <!-- Fonts -->
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+      <script src="https://kit.fontawesome.com/4d5d34d37d.js" crossorigin="anonymous"></script>
       <!-- Styles -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   </head>
@@ -82,11 +82,7 @@
           </nav>
 
           <main class="py-4">
-            @yield('android_table')
-            @yield('web_table')
             @yield('content')
-            @yield('android')
-            @yield('web')
           </main>
       </div>
   </body>
