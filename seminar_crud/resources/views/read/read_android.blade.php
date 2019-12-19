@@ -20,17 +20,25 @@
       </tr>
     </thead>
     <tbody>
+      @foreach($data as $item)
       <tr>
-        <td>1</td>
-        <td>Otto</td>
-        <td>Jelambar</td>
-        <td>23 tahiun</td>
-        <td>xxxxx@example.com</td>
-        <td>0823-XXXX-XXXX</td>
-        <td>Pria</td>
+        <td>{{$item->id_seminar}}</td>
+        <td>{{$item->nama}}</td>
+        <td>{{$item->alamat}}</td>
+        <td>{{$item->usia}}</td>
+        <td>{{$item->email}}</td>
+        <td>{{$item->no_tlp}}</td>
+        <td>{{$item->jenis_kelamin}}</td>
         <td><a class="btn btn-success" href="#">Ubah</a></td>
-        <td><a class="btn btn-danger" href="#">Hapus</a></td>
+        <td>
+          <form class="" action="/PesertaAndroid/{{$item->id}}" method="post">
+            {{csrf_field()}}
+            {{method_field('DELETE')}}
+            <button class="btn btn-danger" type="submit" value="delete">Hapus</button>
+          </form>
+        </td>
       </tr>
+      @endforeach
     </tbody>
   </table>
 </div>

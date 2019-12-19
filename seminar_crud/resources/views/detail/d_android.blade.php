@@ -148,10 +148,10 @@
                                     <div class="form-group" class="radio">
                                         <!-- Jenis Kelamin -->
                                         <label for="input1"><b>Jenis Kelamin</b></label><br>
-                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="pria"
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="Pria"
                                             checked>Pria &nbsp;
-                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="wanita"
-                                            checked>wanita
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="Wanita"
+                                            checked>Wanita
                                     </div>
 
                                 </div>

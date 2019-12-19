@@ -22,3 +22,4 @@ Route::post('android', 'pesertaController@storeAndroid');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/PesertaAndroid', 'pesertaController@read');
 Route::get('/PesertaWeb', 'pesertaController@read_web');
+Route::delete('/PesertaAndroid/{id}', 'pesertaController@destroy');

@@ -45,11 +45,17 @@ class pesertaController extends Controller
     public function read()
     {
         $data = Peserta::all();
-        return view('read.read_android');
+        return view('read.read_android', compact('data'));
     }
     public function read_web()
     {
         $data = Peserta::all();
-        return view('read.read_web');
+        return view('read.read_web', compact('data'));
+    }
+    public function destroy($id){
+      $data= Peserta::find($id);
+      $data->delete();
+
+      return redirect('/PesertaAndroid');
     }
 }
