@@ -82,8 +82,8 @@
         aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Masukkan Data Diri Anda</h5>
+                <div class="modal-header bg-info">
+                    <h5 class="modal-title ml-auto" id="exampleModalLabel">Masukkan Data Diri Anda</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -136,7 +136,8 @@
                                     {{-- No Hp --}}
                                     <div class="form-group">
                                         <label class="font-weight-bold" for="no_tlp">No Handphone</label>
-                                        <input type="text" name="no_tlp" id="no_tlp" class="form-control" aria-describedby="helpId">
+                                        <input type="text" name="no_tlp" id="no_tlp" class="form-control"
+                                            aria-describedby="helpId">
                                         <small id="helpId" class="text-muted">Masukkan No Handphone anda</small>
                                         {{-- End HP --}}
                                     </div>
@@ -147,39 +148,31 @@
                                     <div class="form-group" class="radio">
                                         <!-- Jenis Kelamin -->
                                         <label for="input1"><b>Jenis Kelamin</b></label><br>
-                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="pria" checked>Pria &nbsp;
-                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="wanita" checked>wanita
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="pria"
+                                            checked>Pria &nbsp;
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="wanita"
+                                            checked>wanita
                                     </div>
-                                
+
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" on>Simpan</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
                             {{-- save alert --}}
                             <script>
-                                var msg = '{{Session::get('
-                                alert ')}}';
-                                var exist = '{{Session::has('
-                                alert ')}}';
+                                var msg = '{{Session::get('alert')}}';
+                                var exist = '{{Session::has('alert')}}';
                                 if (exist) {
                                     alert(msg);
                                 }
-                    
                             </script>
                             {{-- end alert  --}}
                         </div>
-                    </div>               
+                    </div>
                 </form>
             </div>
         </div>
     </div>
     @endsection
-
-
-
-
-
-    
-    
