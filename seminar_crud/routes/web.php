@@ -21,3 +21,6 @@ Route::get('/android', 'pesertaController@androidDetail');
 Route::post('android', 'pesertaController@storeAndroid');
 Route::get('/', 'HomeController@index')->name('home');
 // Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/PesertaAndroid','pesertaController@read');
+Route::get('/PesertaWeb','pesertaController@read_web');
