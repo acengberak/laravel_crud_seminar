@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('tittle'.'Peserta Seminar Web')
-@section('web_table')
+@section('tittle','Peserta Seminar Web')
+@section('content')
 <div class="container">
   <div class="jumbotron jumbotron-fluid text-center" style="background-color:#7ed5cb;">
     <div class="container">
