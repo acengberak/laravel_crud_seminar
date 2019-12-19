@@ -54,74 +54,132 @@
             <div class="col-sm-4 text-center">
                 <div class="card">
                     <img src="/img/get_certified.svg" class="img-fluid" alt="get">
-                     <div class="card-body">
-                         <h4 class="card-title">Dapatkan sertifikasi</h4>
-                         <p class="card-text">Untuk mendapatkan pekerjaan sebagai developer Android, Anda perlu mengembangkan keahlian yang tepat, juga perlu menunjukkan kepada perekrut dan manajer perekrutan bahwa Anda sudah siap. Memperoleh Associate Android Developer Certification dari Google akan menjadi bukti kemampuan Anda.</p>
-                     </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Dapatkan sertifikasi</h4>
+                        <p class="card-text">Untuk mendapatkan pekerjaan sebagai developer Android, Anda perlu
+                            mengembangkan keahlian yang tepat, juga perlu menunjukkan kepada perekrut dan manajer
+                            perekrutan bahwa Anda sudah siap. Memperoleh Associate Android Developer Certification dari
+                            Google akan menjadi bukti kemampuan Anda.</p>
+                    </div>
+                </div>
             </div>
+            {{-- End Content 2  --}}
         </div>
-    {{-- End Content 2  --}}
     </div>
-</div>
 
-<div class="content-3 py-5">
-    <div class="banner-bg">
-        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tambah">Daftar Seminar</button>
+    <div class="content-3 py-5">
+        <div class="banner-bg">
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#tambah">Daftar
+                Seminar</button>
+        </div>
     </div>
-</div>
 
 
 
 
     {{-- MODAL --}}
-<div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Masukkan Data Diri Anda</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <form action="/home" method="post">
-        
-            <div class="modal-body">
-            {{ csrf_field() }}
-            <input type="hidden" name="id" id="">
-            {{-- nama --}}
-        <div class="form-group">
-            <label class="font-weight-bold" for="nama">Nama</label>
-            <input type="text" name="nama" id="nama" class="form-control" placeholder="" aria-describedby="helpId">
-            <small id="helpId" class="text-muted">Masukkan Nama anda</small>
-        </div>
-        {{-- Alamat --}}
-        <div class="form-group">
-            <label class="font-weight-bold" for="alamat">Alamat</label>
-            <input type="text" name="alamat" id="alamat" class="form-control" placeholder="" aria-describedby="helpId">
-            <small id="helpId" class="text-muted">Masukkan Alamat anda</small>
-        </div>
-        {{-- No Hp --}}
-        <div class="form-group">
-            <label class="font-weight-bold" for="usia">Usia</label>
-            <input type="text" name="usia" id="usia" class="form-control" placeholder="" aria-describedby="helpId">
-            <small id="helpId" class="text-muted">Masukkan umur anda</small>
-        </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button  type="submit" class="btn btn-primary" on>Simpan</button>
-            {{-- save alert --}}
-            <script>
-                var msg = '{{Session::get('alert')}}';
-                var exist = '{{Session::has('alert')}}';
-                if(exist){
-                    alert(msg);
-                } 
-                </script>
-                {{-- end alert  --}}
-        </div>
-        </form>
+    <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Masukkan Data Diri Anda</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="/android" method="post">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="id_seminar" id="">
+                                    {{-- nama --}}
+                                    <div class="form-group">
+                                        <label class="font-weight-bold" for="nama">Nama</label>
+                                        <input type="text" name="nama" id="nama" class="form-control" placeholder=""
+                                            aria-describedby="helpId">
+                                        <small id="helpId" class="text-muted">Masukkan Nama anda</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    {{-- Alamat --}}
+                                    <div class="form-group">
+                                        <label class="font-weight-bold" for="alamat">Alamat</label>
+                                        <input type="text" name="alamat" id="alamat" class="form-control" placeholder=""
+                                            aria-describedby="helpId">
+                                        <small id="helpId" class="text-muted">Masukkan Alamat anda</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    {{-- Usia --}}
+                                    <div class="form-group">
+                                        <label class="font-weight-bold" for="usia">Usia</label>
+                                        <input type="text" name="usia" id="usia" class="form-control"
+                                            aria-describedby="helpId">
+                                        <small id="helpId" class="text-muted">Masukkan umur anda</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mr-auto">
+                                    {{-- Email --}}
+                                    <div class="form-group">
+                                        <label class="font-weight-bold" for="email">Email</label>
+                                        <input type="email" name="email" id="email" class="form-control" placeholder=""
+                                            aria-describedby="helpId">
+                                        <small id="helpId" class="text-muted">Masukkan Email anda</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    {{-- No Hp --}}
+                                    <div class="form-group">
+                                        <label class="font-weight-bold" for="no_tlp">No Handphone</label>
+                                        <input type="text" name="no_tlp" id="no_tlp" class="form-control" aria-describedby="helpId">
+                                        <small id="helpId" class="text-muted">Masukkan No Handphone anda</small>
+                                        {{-- End HP --}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group" class="radio">
+                                        <!-- Jenis Kelamin -->
+                                        <label for="input1"><b>Jenis Kelamin</b></label><br>
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="pria" checked>Pria &nbsp;
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="wanita" checked>wanita
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" on>Simpan</button>
+                            {{-- save alert --}}
+                            <script>
+                                var msg = '{{Session::get('
+                                alert ')}}';
+                                var exist = '{{Session::has('
+                                alert ')}}';
+                                if (exist) {
+                                    alert(msg);
+                                }
+                    
+                            </script>
+                            {{-- end alert  --}}
+                        </div>
+                    </div>               
+                </form>
+            </div>
         </div>
     </div>
-</div>
     @endsection
+
+
+
+
+
+    
+    

@@ -11,9 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    {{-- BOOTSTRAP --}}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {{-- CSS --}}
     <link rel="stylesheet" href="/css/d_android.css">
+    <link rel="stylesheet" href="/css/view.css">
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -81,21 +81,26 @@
         </nav>
 
         <main class="py-4">
+            @yield('android_table')
+            @yield('web_table')
             @yield('content')
             @yield('android')
             @yield('web')
-        </main>
-        
-        <footer id="footer-app">
-            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-                <div class="footer container">
-                    <a class="navbar-brand mx-auto" href="{{ url('/') }}">
-                        CRUD LARAVEL
-                    </a>
-                </div>
-            </nav>
-        </footer>
+        </main>         
     </div>
-   
+    <footer id="footer-app">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="footer container">
+                <a class="navbar-brand mx-auto" href="{{ url('/') }}">
+                    CRUD LARAVEL
+                </a>
+            </div>
+        </nav>
+    </footer>
+    
+    <!-- Optional JavaScript -->    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -18,5 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/web', 'pesertaController@webDetail');
 Route::get('/android', 'pesertaController@androidDetail');
+Route::post('android', 'pesertaController@storeAndroid');
 Route::get('/', 'HomeController@index')->name('home');
 // Route::get('/home', 'HomeController@index')->name('home');
