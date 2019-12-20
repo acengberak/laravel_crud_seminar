@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
-@section('android')
+@section('title','Detail Seminar Android')
+@section('content')
 
 <div class="container">
     <div class="tittle py-5">
@@ -74,9 +74,6 @@
         </div>
     </div>
 
-
-
-
     {{-- MODAL --}}
     <div class="modal fade" id="tambah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -148,10 +145,10 @@
                                     <div class="form-group" class="radio">
                                         <!-- Jenis Kelamin -->
                                         <label for="input1"><b>Jenis Kelamin</b></label><br>
-                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="pria"
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="Pria"
                                             checked>Pria &nbsp;
-                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="wanita"
-                                            checked>wanita
+                                        <input type="radio" name="jenis_kelamin" id="optionsRadio1" value="Wanita"
+                                            checked>Wanita
                                     </div>
 
                                 </div>
