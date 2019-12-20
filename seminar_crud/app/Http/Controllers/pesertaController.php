@@ -58,14 +58,13 @@ class pesertaController extends Controller
         $data = Peserta::all();
         return view('read.read_web', compact('data'));
     }
-<<<<<<< HEAD
-    public function destroy($id){
-      $data= Peserta::find($id);
-      $data->delete();
+    public function destroy($id)
+    {
+        $data = Peserta::find($id);
+        $data->delete();
 
-      return redirect('/PesertaAndroid');
-=======
-
+        return redirect('PesertaAndroid');
+    }
 
     public function editAndroid($id)
     {
@@ -86,6 +85,5 @@ class pesertaController extends Controller
 
         $data->save();
         return redirect()->back()->with('alert', 'Data Terupdate!');
->>>>>>> adit
     }
 }

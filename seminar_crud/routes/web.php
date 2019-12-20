@@ -23,6 +23,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/PesertaAndroid', 'pesertaController@read');
 Route::get('/PesertaWeb', 'pesertaController@read_web');
 Route::put('/PesertaAndroid/update/{id}', 'pesertaController@updateAndroid');
+Route::delete('/PesertaAndroid/{id}', 'pesertaController@destroy');
 
 // files
 Route::get('/files', 'FileController@index');

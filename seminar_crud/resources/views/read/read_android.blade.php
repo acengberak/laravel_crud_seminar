@@ -22,34 +22,25 @@
       </tr>
     </thead>
     <tbody>
-<<<<<<< HEAD
-      @foreach($data as $item)
-      <tr>
-        <td>{{$item->id_seminar}}</td>
-=======
       @foreach ($data as $item)
       <tr>      
         <td>{{$loop->iteration}}</td>
->>>>>>> adit
         <td>{{$item->nama}}</td>
         <td>{{$item->alamat}}</td>
         <td>{{$item->usia}}</td>
         <td>{{$item->email}}</td>
         <td>{{$item->no_tlp}}</td>
         <td>{{$item->jenis_kelamin}}</td>
-<<<<<<< HEAD
-        <td><a class="btn btn-success" href="#">Ubah</a></td>
+        <td><a class="btn btn-success" data-toggle="modal" data-target="#edit{{$item->id_seminar}}">Ubah</a></td>
         <td>
-          <form class="" action="/PesertaAndroid/{{$item->id}}" method="post">
+          <form class="" action="/PesertaAndroid/{{$item->id_seminar}}" method="post">
             {{csrf_field()}}
             {{method_field('DELETE')}}
             <button class="btn btn-danger" type="submit" value="delete">Hapus</button>
           </form>
         </td>
-=======
-        <td><a class="btn btn-success" data-toggle="modal" data-target="#edit{{$item->id_seminar}}">Ubah</a></td>
-        <td><a class="btn btn-danger" href="#">Hapus</a></td>   
->>>>>>> adit
+        
+
       </tr>
       @endforeach
     </tbody>
